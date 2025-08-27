@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZATCA E-Invoicing Integration | Umer Anwar</title>
+    <meta name="description" content="Complete implementation of Saudi Arabian E-Invoicing compliance solution using SAP E-Document Cockpit integrated with FATOORA Portal">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">UA</div>
+                <span>SAP ABAP Portfolio</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="zatca-integration.html" class="active">ZATCA Integration</a></li>
+                    <li><a href="fbr-integration.html">FBR Integration</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Home</a>
+            <h1>ZATCA E-Invoicing Integration</h1>
+            <p>Complete implementation of Saudi Arabian E-Invoicing compliance solution using SAP E-Document Cockpit integrated with FATOORA Portal</p>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-overview">
+        <div class="container">
+            <div class="section-title">
+                <h2>Project Overview</h2>
+            </div>
+            <div class="overview-content">
+                <div class="overview-challenge">
+                    <h3>Challenge</h3>
+                    <p>Saudi Arabia's Zakat, Tax and Customs Authority (ZATCA) mandated E-Invoicing compliance for all businesses. The challenge was to integrate SAP systems with ZATCA's FATOORA portal while ensuring:</p>
+                    <ul>
+                        <li>Real-time invoice submission and validation</li>
+                        <li>Compliance with ZATCA technical specifications</li>
+                        <li>High-volume processing capabilities</li>
+                        <li>Comprehensive audit trail and reporting</li>
+                    </ul>
+                </div>
+                <div class="overview-solution">
+                    <h3>Solution</h3>
+                    <p>Implemented a comprehensive integration solution using SAP E-Document Cockpit with custom enhancements for ZATCA compliance:</p>
+                    <ul>
+                        <li>Custom ABAP classes for ZATCA API integration</li>
+                        <li>SAP CPI integration flows for real-time processing</li>
+                        <li>Enhanced monitoring and error handling</li>
+                        <li>Automated compliance reporting dashboard</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation -->
+    <section class="technical-implementation">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Implementation</h2>
+            </div>
+            <div class="implementation-content">
+                <div class="implementation-item">
+                    <h3>1. Web Service Configuration</h3>
+                    <p>Configured SAP Web Service Consumer Proxy for ZATCA integration with proper logical ports and security settings.</p>
+                    <div class="code-snippet">
+                        <pre>
+DATA: lo_proxy TYPE REF TO zco_edo_sa_send_invoice_v2_0,
+      lv_request TYPE zedo_sa_send_invoice_v2,
+      lv_response TYPE zedo_sa_send_invoice_v2_response.
+
+* Create proxy instance
+CREATE OBJECT lo_proxy
+  EXPORTING
+    logical_port_name = 'EDO_SA_SEND_INVOICE'.
+                        </pre>
+                    </div>
+                </div>
+                <div class="implementation-item">
+                    <h3>2. Core ABAP Implementation</h3>
+                    <p>Developed custom ABAP classes to handle ZATCA invoice processing with comprehensive error handling and validation.</p>
+                    <div class="code-snippet">
+                        <pre>
+METHOD process_invoice.
+  " Validate invoice data
+  IF validate_invoice( ) = abap_false.
+    mv_status = 'VALIDATION_FAILED'.
+    rv_success = abap_false.
+    RETURN.
+  ENDIF.
+
+  " Build ZATCA compliant payload
+  DATA(lv_payload) = build_zatca_payload( ).
+
+  " Call ZATCA API
+  DATA(lv_response) = call_zatca_api( lv_payload ).
+ENDMETHOD.
+                        </pre>
+                    </div>
+                </div>
+                <div class="implementation-item">
+                    <h3>3. SAP CPI Integration</h3>
+                    <p>Implemented integration flows in SAP CPI for seamless communication between SAP and ZATCA systems.</p>
+                    <div class="tech-details">
+                        <ul>
+                            <li><strong>Trigger:</strong> SAP E-Document Cockpit event or scheduled job</li>
+                            <li><strong>Data Extraction:</strong> Retrieve invoice data from SAP tables</li>
+                            <li><strong>Transformation:</strong> Convert SAP format to ZATCA JSON schema</li>
+                            <li><strong>API Call:</strong> Submit invoice to ZATCA with retry mechanism</li>
+                            <li><strong>Response Handling:</strong> Process response and update SAP status</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results and Benefits -->
+    <section class="results">
+        <div class="container">
+            <div class="section-title">
+                <h2>Results & Business Benefits</h2>
+            </div>
+            <div class="results-stats">
+                <div class="stat-card">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">&lt; 2 sec</div>
+                    <div class="stat-label">Avg Processing Time</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Compliance Rate</div>
+                </div>
+            </div>
+            <div class="results-list">
+                <h3>Key Achievements:</h3>
+                <ul>
+                    <li><strong>Seamless Integration:</strong> Successfully integrated SAP E-Document Cockpit with ZATCA FATOORA portal without disrupting existing business processes</li>
+                    <li><strong>High Performance:</strong> Processed over 50,000 invoices monthly with average processing time of less than 2 seconds per invoice</li>
+                    <li><strong>Compliance Assurance:</strong> Achieved 100% compliance with ZATCA E-Invoicing regulations and technical specifications</li>
+                    <li><strong>Error Reduction:</strong> Reduced manual intervention by 95% through automated validation and error handling mechanisms</li>
+                    <li><strong>Real-time Monitoring:</strong> Implemented comprehensive monitoring dashboard providing real-time insights into submission status and compliance metrics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">UA</div>
+                    <span>Umer Anwar</span>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:your.email@example.com" title="Email">
+                        ✉️
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+                        🔗
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" title="GitHub">
+                        🐙
+                    </a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Umer Anwar - SAP ABAP Developer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
 

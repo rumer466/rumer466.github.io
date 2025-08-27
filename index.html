@@ -3,352 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAP ABAP Portfolio - Umer Anwar</title>
-    <meta name="description" content="Senior SAP ABAP Developer specializing in enterprise integration solutions">
-    
-    <!-- SEO and Social Media -->
-    <meta property="og:title" content="SAP ABAP Portfolio - Umer Anwar">
-    <meta property="og:description" content="Senior SAP ABAP Developer with 10+ years experience in enterprise integration">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <title>Umer Anwar - SAP ABAP Developer Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">UA</a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+    <header>
+        <nav>
+            <div class="logo">UA</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/projects.html">Projects</a></li>
+                <li><a href="pages/experience.html">Experience</a></li>
+                <li><a href="pages/skills.html">Skills</a></li>
+                <li><a href="pages/about.html">About</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">SAP ABAP Development Portfolio</h1>
-            <p class="hero-subtitle">Enterprise Integration Solutions</p>
-            <p class="hero-description">Senior SAP ABAP Developer with 10+ years experience in complex SAP environments</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-outline">Contact Me</a>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Umer Anwar</h1>
+                <h2>SAP ABAP Developer</h2>
+                <p>Specialized in SAP Integration, E-Invoicing Solutions, and Custom Development</p>
+                <div class="hero-buttons">
+                    <a href="pages/projects.html" class="btn btn-primary">View Projects</a>
+                    <a href="pages/about.html" class="btn btn-secondary">About Me</a>
+                </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <div class="floating-card">
-                <div class="card-icon"><i class="fas fa-code"></i></div>
-                <div class="card-text">ABAP Development</div>
-            </div>
-            <div class="floating-card">
-                <div class="card-icon"><i class="fas fa-plug"></i></div>
-                <div class="card-text">Integration</div>
-            </div>
-            <div class="floating-card">
-                <div class="card-icon"><i class="fas fa-cloud"></i></div>
-                <div class="card-text">Cloud Solutions</div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+        <section id="featured-projects">
+            <h2>Featured Projects</h2>
             <div class="projects-grid">
-                <!-- ZATCA Project -->
                 <div class="project-card">
                     <div class="project-icon">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <h3 class="project-title">ZATCA Integration</h3>
-                    <p class="project-description">Saudi Arabian E-Invoicing compliance solution using SAP E-Document Cockpit integrated with FATOORA portal</p>
-                    <div class="project-tags">
-                        <span class="tag">SAP ABAP</span>
-                        <span class="tag">CPI</span>
-                        <span class="tag">Web Services</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-value">99.9%</span>
-                            <span class="stat-label">Success Rate</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">&lt;2s</span>
-                            <span class="stat-label">Processing Time</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">50K+</span>
-                            <span class="stat-label">Invoices/Month</span>
-                        </div>
-                    </div>
-                    <a href="#zatca-details" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    <h3>ZATCA Integration</h3>
+                    <p>E-Invoicing solution with FATOORA Portal integration for Saudi Arabian tax compliance</p>
+                    <a href="pages/zatca-integration.html" class="btn btn-outline">View Details</a>
                 </div>
-
-                <!-- FBR Project -->
                 <div class="project-card">
                     <div class="project-icon">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3 class="project-title">FBR Integration</h3>
-                    <p class="project-description">Pakistan's Federal Board of Revenue real-time invoice submission system using Haball APIs and SAP Cloud Platform</p>
-                    <div class="project-tags">
-                        <span class="tag">REST APIs</span>
-                        <span class="tag">SAP CPI</span>
-                        <span class="tag">QR Code</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-value">98.5%</span>
-                            <span class="stat-label">Success Rate</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">&lt;3s</span>
-                            <span class="stat-label">Processing Time</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">30K+</span>
-                            <span class="stat-label">Invoices/Month</span>
-                        </div>
-                    </div>
-                    <a href="#fbr-details" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    <h3>FBR Integration</h3>
+                    <p>Real-time invoice submission system for Pakistan's Federal Board of Revenue</p>
+                    <a href="pages/fbr-integration.html" class="btn btn-outline">View Details</a>
                 </div>
-
-                <!-- Other Projects -->
                 <div class="project-card">
                     <div class="project-icon">
-                        <i class="fas fa-puzzle-piece"></i>
+                        <i class="fas fa-cloud"></i>
                     </div>
-                    <h3 class="project-title">Integration Solutions</h3>
-                    <p class="project-description">Comprehensive integration projects including non-SAP systems, payment gateways, mobile apps, and SMS notifications</p>
-                    <div class="project-tags">
-                        <span class="tag">SOAP/REST</span>
-                        <span class="tag">Mobile</span>
-                        <span class="tag">Payment</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat">
-                            <span class="stat-value">15+</span>
-                            <span class="stat-label">Projects</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">95%</span>
-                            <span class="stat-label">Automation</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">24/7</span>
-                            <span class="stat-label">Monitoring</span>
-                        </div>
-                    </div>
-                    <a href="#other-details" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    <h3>SAP Cloud Integration</h3>
+                    <p>Integration flows in SAP CPI for various enterprise scenarios</p>
+                    <a href="pages/sap-cloud-integration.html" class="btn btn-outline">View Details</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-code skill-icon"></i>
-                        <h3 class="skill-title">ABAP Development</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li>Object-Oriented ABAP (OOABAP)</li>
-                        <li>CDS Views (Core Data Services)</li>
-                        <li>AMDP (ABAP Managed Database Procedures)</li>
-                        <li>Web Dynpro ABAP</li>
-                        <li>Smart Forms & Adobe Forms</li>
-                        <li>ALV Reports & Interactive Lists</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-plug skill-icon"></i>
-                        <h3 class="skill-title">SAP Integration</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li>SAP Process Integration (PI/PO)</li>
-                        <li>SAP Cloud Platform Integration (CPI)</li>
-                        <li>IDoc Development & Processing</li>
-                        <li>RFC & BAPI Programming</li>
-                        <li>SOAP & REST Web Services</li>
-                        <li>OData Services</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-cube skill-icon"></i>
-                        <h3 class="skill-title">SAP Modules</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li>SD (Sales & Distribution)</li>
-                        <li>FI (Financial Accounting)</li>
-                        <li>CO (Controlling)</li>
-                        <li>MM (Materials Management)</li>
-                        <li>PP (Production Planning)</li>
-                        <li>HCM (Human Capital Management)</li>
-                        <li>REFX (Real Estate)</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-cloud skill-icon"></i>
-                        <h3 class="skill-title">Cloud Technologies</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li>SAP HANA</li>
-                        <li>SAP BTP (Business Technology Platform)</li>
-                        <li>SAP Fiori Development</li>
-                        <li>SAP UI5</li>
-                        <li>Oracle Database</li>
-                        <li>SQL Optimization</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I am a Senior SAP ABAP Developer with over 10 years of experience in enterprise application development, 
-                        system integration, and technical consulting. My passion lies in leveraging cutting-edge SAP technologies 
-                        to solve complex business challenges and drive digital transformation.
-                    </p>
-                    <p>
-                        Throughout my career, I have successfully delivered numerous complex SAP projects including ZATCA integration, 
-                        FBR compliance, and various module-specific enhancements. I specialize in creating robust, scalable 
-                        solutions that meet both technical requirements and business objectives.
-                    </p>
-                    <p>
-                        My approach combines deep technical expertise with a strong understanding of business processes, 
-                        ensuring that the solutions I deliver not only function flawlessly but also provide tangible business value.
-                    </p>
-                    <div class="about-highlights">
-                        <div class="highlight">
-                            <span class="highlight-number">10+</span>
-                            <span class="highlight-label">Years Experience</span>
-                        </div>
-                        <div class="highlight">
-                            <span class="highlight-number">25+</span>
-                            <span class="highlight-label">Projects Delivered</span>
-                        </div>
-                        <div class="highlight">
-                            <span class="highlight-number">99.9%</span>
-                            <span class="highlight-label">Client Satisfaction</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="images/profile.jpg" alt="Umer Anwar" class="profile-photo">
-                    <div class="certification-badges">
-                        <div class="badge">
-                            <i class="fas fa-certificate"></i>
-                            <span>SAP Certified</span>
-                        </div>
-                        <div class="badge">
-                            <i class="fas fa-award"></i>
-                            <span>ABAP Specialist</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p>
-                        I'm always interested in hearing about new projects and opportunities. 
-                        Whether you have a question or just want to say hi, feel free to reach out!
-                    </p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <div class="method-info">
-                                <span class="method-label">Email</span>
-                                <span class="method-value">umer.anwar@example.com</span>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-phone"></i>
-                            <div class="method-info">
-                                <span class="method-label">Phone</span>
-                                <span class="method-value">+92 300 1234567</span>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="method-info">
-                                <span class="method-label">Location</span>
-                                <span class="method-value">Lahore, Pakistan</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-social">
-                    <h3>Follow Me</h3>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/umeranwar" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/rumer466" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:umer.anwar@example.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Umer Anwar. All rights reserved.</p>
-                <p>Built with <i class="fas fa-heart"></i> using GitHub Pages</p>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Umer Anwar - SAP ABAP Developer. All rights reserved.</p>
+            <div class="social-links">
+                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
-

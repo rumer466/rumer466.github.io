@@ -1,0 +1,445 @@
+/* Page-specific styles */
+.page-header {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, var(--sap-light-blue) 0%, white 100%);
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: var(--sap-blue);
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--sap-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Projects Page Styles */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-detail {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-detail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--sap-light-gray);
+}
+
+.project-icon {
+    font-size: 2.5rem;
+    color: var(--sap-yellow);
+    margin-right: 1.5rem;
+}
+
+.project-header h2 {
+    font-size: 1.8rem;
+    color: var(--sap-blue);
+    margin-bottom: 0.25rem;
+}
+
+.project-tech {
+    color: var(--sap-gray);
+    font-style: italic;
+}
+
+.project-highlights h3 {
+    color: var(--sap-blue);
+    margin: 1.5rem 0 1rem;
+}
+
+.project-highlights ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-highlights li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--sap-gray);
+}
+
+.project-highlights li:before {
+    content: "•";
+    color: var(--sap-yellow);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -0.2rem;
+}
+
+/* Experience Page Styles */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experience-item {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--sap-light-gray);
+}
+
+.company-logo {
+    font-size: 2.5rem;
+    color: var(--sap-yellow);
+    margin-right: 1.5rem;
+}
+
+.experience-info h3 {
+    font-size: 1.8rem;
+    color: var(--sap-blue);
+    margin-bottom: 0.25rem;
+}
+
+.position {
+    font-weight: 600;
+    color: var(--sap-gray);
+    margin-bottom: 0.25rem;
+}
+
+.duration {
+    color: var(--sap-gray);
+    font-style: italic;
+}
+
+.key-responsibilities h4 {
+    color: var(--sap-blue);
+    margin: 1.5rem 0 1rem;
+}
+
+.key-responsibilities ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.key-responsibilities li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--sap-gray);
+}
+
+.key-responsibilities li:before {
+    content: "•";
+    color: var(--sap-yellow);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -0.2rem;
+}
+
+/* Skills Page Styles */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.skills-category {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--sap-light-gray);
+}
+
+.category-icon {
+    font-size: 2.5rem;
+    color: var(--sap-yellow);
+    margin-right: 1.5rem;
+}
+
+.category-header h2 {
+    font-size: 1.8rem;
+    color: var(--sap-blue);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-item {
+    background: var(--sap-light-gray);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.skill-name {
+    font-weight: 600;
+    color: var(--sap-blue);
+    margin-bottom: 0.5rem;
+}
+
+.skill-level {
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--sap-yellow), var(--sap-blue));
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.certification-item {
+    background: var(--sap-light-gray);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.cert-icon {
+    font-size: 2rem;
+    color: var(--sap-yellow);
+    margin-right: 1rem;
+}
+
+.cert-details h3 {
+    font-size: 1.2rem;
+    color: var(--sap-blue);
+    margin-bottom: 0.25rem;
+}
+
+.cert-details p {
+    color: var(--sap-gray);
+    font-size: 0.9rem;
+}
+
+/* About Page Styles */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-profile {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.profile-placeholder {
+    width: 150px;
+    height: 150px;
+    background: var(--sap-light-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--sap-blue);
+}
+
+.profile-info h2 {
+    font-size: 2rem;
+    color: var(--sap-blue);
+    margin-bottom: 0.5rem;
+}
+
+.profile-title {
+    font-size: 1.2rem;
+    color: var(--sap-yellow);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.profile-contact p {
+    display: flex;
+    align-items: center;
+    color: var(--sap-gray);
+    margin-bottom: 0.5rem;
+}
+
+.profile-contact i {
+    width: 20px;
+    color: var(--sap-blue);
+    margin-right: 0.5rem;
+}
+
+.profile-social {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-social a {
+    color: var(--sap-blue);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.profile-social a:hover {
+    color: var(--sap-yellow);
+}
+
+.about-section {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.about-section h3 {
+    font-size: 1.8rem;
+    color: var(--sap-blue);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--sap-light-gray);
+}
+
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.education-icon {
+    font-size: 2rem;
+    color: var(--sap-yellow);
+    flex-shrink: 0;
+}
+
+.education-details h4 {
+    font-size: 1.2rem;
+    color: var(--sap-blue);
+    margin-bottom: 0.25rem;
+}
+
+.institution {
+    font-weight: 600;
+    color: var(--sap-gray);
+    margin-bottom: 0.25rem;
+}
+
+.duration {
+    color: var(--sap-gray);
+    font-style: italic;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.value-item {
+    background: var(--sap-light-gray);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    color: var(--sap-yellow);
+    margin-bottom: 1rem;
+}
+
+.value-item h4 {
+    font-size: 1.2rem;
+    color: var(--sap-blue);
+    margin-bottom: 0.5rem;
+}
+
+.resume-download {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .project-header,
+    .experience-header,
+    .category-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .project-icon,
+    .company-logo,
+    .category-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}

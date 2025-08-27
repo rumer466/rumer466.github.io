@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBR Integration | Umer Anwar</title>
+    <meta name="description" content="Real-time invoice submission system for Pakistan's Federal Board of Revenue using Haball APIs and SAP Cloud Platform">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">UA</div>
+                <span>SAP ABAP Portfolio</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="zatca-integration.html">ZATCA Integration</a></li>
+                    <li><a href="fbr-integration.html" class="active">FBR Integration</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Home</a>
+            <h1>FBR Integration - Pakistan's Tax Authority</h1>
+            <p>Real-time invoice submission system for Pakistan's Federal Board of Revenue using Haball APIs and SAP Cloud Platform Integration</p>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-overview">
+        <div class="container">
+            <div class="section-title">
+                <h2>Project Overview</h2>
+            </div>
+            <div class="overview-content">
+                <div class="overview-challenge">
+                    <h3>Challenge</h3>
+                    <p>Pakistan's Federal Board of Revenue (FBR) mandated electronic invoicing integration for real-time tax compliance. The key challenges included:</p>
+                    <ul>
+                        <li>Integration with Haball payment gateway APIs</li>
+                        <li>Real-time QR code generation and validation</li>
+                        <li>Compliance with FBR technical specifications</li>
+                        <li>High-volume invoice processing requirements</li>
+                    </ul>
+                </div>
+                <div class="overview-solution">
+                    <h3>Solution</h3>
+                    <p>Implemented end-to-end integration solution using SAP Cloud Platform Integration and custom ABAP development:</p>
+                    <ul>
+                        <li>SAP CPI integration with Haball REST APIs</li>
+                        <li>Custom ABAP classes for QR code generation</li>
+                        <li>Real-time invoice validation and submission</li>
+                        <li>Comprehensive monitoring and reporting system</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation -->
+    <section class="technical-implementation">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Implementation</h2>
+            </div>
+            <div class="implementation-content">
+                <div class="implementation-item">
+                    <h3>1. Haball API Integration</h3>
+                    <p>Developed integration with Haball payment gateway for real-time invoice submission and QR code generation.</p>
+                    <div class="code-snippet">
+                        <pre>
+CLASS zcl_haball_api_integration DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+    METHODS:
+      constructor
+        IMPORTING
+          iv_api_key    TYPE string
+          iv_secret_key TYPE string,
+      submit_invoice
+        IMPORTING
+          is_invoice_data TYPE zhaball_invoice_struc
+        RETURNING VALUE(rv_response) TYPE zhaball_response_struc.
+ENDCLASS.
+                        </pre>
+                    </div>
+                </div>
+                <div class="implementation-item">
+                    <h3>2. QR Code Generation</h3>
+                    <p>Implemented comprehensive QR code generation system compliant with FBR specifications for sales tax invoices.</p>
+                    <div class="code-snippet">
+                        <pre>
+METHOD generate_qr_code.
+  " Generate QR code data for FBR compliance
+  SELECT SINGLE vbrk~vbeln, vbrk~fkdat, vbrk~netwr,
+                kna1~name1, kna1~stcd1
+    FROM vbrk
+    INNER JOIN kna1 ON vbrk~kunrg = kna1~kunnr
+    WHERE vbrk~vbeln = @iv_vbeln
+    INTO @DATA(ls_invoice).
+ENDMETHOD.
+                        </pre>
+                    </div>
+                </div>
+                <div class="implementation-item">
+                    <h3>3. SAP CPI Integration</h3>
+                    <p>Designed and deployed integration flows in SAP CPI for seamless communication between SAP and Haball APIs.</p>
+                    <div class="tech-details">
+                        <ul>
+                            <li><strong>Trigger:</strong> SAP E-Document Cockpit event or scheduled job</li>
+                            <li><strong>Data Extraction:</strong> Retrieve invoice data from SAP tables</li>
+                            <li><strong>Transformation:</strong> Convert SAP format to Haball API schema</li>
+                            <li><strong>QR Generation:</strong> Generate FBR compliant QR codes</li>
+                            <li><strong>API Call:</strong> Submit invoice to Haball with retry mechanism</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results and Benefits -->
+    <section class="results">
+        <div class="container">
+            <div class="section-title">
+                <h2>Results & Business Benefits</h2>
+            </div>
+            <div class="results-stats">
+                <div class="stat-card">
+                    <div class="stat-number">98.5%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">&lt; 3 sec</div>
+                    <div class="stat-label">Avg Processing Time</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">FBR Compliance</div>
+                </div>
+            </div>
+            <div class="results-list">
+                <h3>Key Achievements:</h3>
+                <ul>
+                    <li><strong>Complete Integration:</strong> Successfully integrated SAP with Haball APIs for real-time invoice submission and QR code generation</li>
+                    <li><strong>High Performance:</strong> Processed over 30,000 invoices monthly with average processing time of less than 3 seconds per invoice</li>
+                    <li><strong>FBR Compliance:</strong> Achieved 100% compliance with FBR E-Invoicing regulations and QR code specifications</li>
+                    <li><strong>Automated Reporting:</strong> Implemented comprehensive reporting system providing real-time insights into submission status and compliance metrics</li>
+                    <li><strong>Error Reduction:</strong> Reduced manual intervention by 90% through automated validation and error handling mechanisms</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">UA</div>
+                    <span>Umer Anwar</span>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:your.email@example.com" title="Email">
+                        ✉️
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+                        🔗
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" title="GitHub">
+                        🐙
+                    </a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Umer Anwar - SAP ABAP Developer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
 

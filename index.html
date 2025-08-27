@@ -4,78 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Umer Anwar - SAP ABAP Developer Portfolio</title>
+    <meta name="description" content="SAP ABAP Developer Portfolio - Specialized in SAP Integration, E-Invoicing Solutions, and Custom Development">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <nav>
-            <div class="logo">UA</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/projects.html">Projects</a></li>
-                <li><a href="pages/experience.html">Experience</a></li>
-                <li><a href="pages/skills.html">Skills</a></li>
-                <li><a href="pages/about.html">About</a></li>
-            </ul>
-        </nav>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">UA</div>
+                <span>SAP ABAP Portfolio</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="zatca-integration.html">ZATCA Integration</a></li>
+                    <li><a href="fbr-integration.html">FBR Integration</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h1>Umer Anwar</h1>
-                <h2>SAP ABAP Developer</h2>
-                <p>Specialized in SAP Integration, E-Invoicing Solutions, and Custom Development</p>
-                <div class="hero-buttons">
-                    <a href="pages/projects.html" class="btn btn-primary">View Projects</a>
-                    <a href="pages/about.html" class="btn btn-secondary">About Me</a>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>SAP ABAP Development <span>Expert Portfolio</span></h1>
+            <p>Specialized in SAP Integration, E-Invoicing Solutions, Cloud Platform Integration, and Custom Development with 10+ years of experience in complex SAP environments.</p>
+            <div class="hero-buttons">
+                <a href="zatca-integration.html" class="btn">View Projects</a>
+                <a href="about.html" class="btn btn-outline">About Me</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="featured-projects">
-            <h2>Featured Projects</h2>
+    <!-- Featured Projects -->
+    <section class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured SAP Integration Projects</h2>
+            </div>
             <div class="projects-grid">
+                <!-- ZATCA Integration -->
                 <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-globe"></i>
+                    <div class="project-card-header">
+                        <div class="project-icon">🌐</div>
+                        <h3>ZATCA Integration</h3>
                     </div>
-                    <h3>ZATCA Integration</h3>
-                    <p>E-Invoicing solution with FATOORA Portal integration for Saudi Arabian tax compliance</p>
-                    <a href="pages/zatca-integration.html" class="btn btn-outline">View Details</a>
+                    <div class="project-card-body">
+                        <p>Implemented complete E-Invoicing solution with FATOORA Portal integration, ensuring compliance with Saudi Arabian tax regulations.</p>
+                        <div class="project-tech">
+                            <strong>Technologies:</strong> ABAP OData, CPI, SOAP Web Services
+                        </div>
+                        <a href="zatca-integration.html" class="btn">View Details</a>
+                    </div>
                 </div>
+
+                <!-- FBR Integration -->
                 <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-database"></i>
+                    <div class="project-card-header">
+                        <div class="project-icon">💾</div>
+                        <h3>FBR Integration</h3>
                     </div>
-                    <h3>FBR Integration</h3>
-                    <p>Real-time invoice submission system for Pakistan's Federal Board of Revenue</p>
-                    <a href="pages/fbr-integration.html" class="btn btn-outline">View Details</a>
+                    <div class="project-card-body">
+                        <p>Developed real-time invoice submission system for Pakistan's Federal Board of Revenue using Haball APIs and SAP Cloud Platform.</p>
+                        <div class="project-tech">
+                            <strong>Technologies:</strong> REST APIs, CPI, ABAP CDS Views
+                        </div>
+                        <a href="fbr-integration.html" class="btn">View Details</a>
+                    </div>
                 </div>
+
+                <!-- SAP Cloud Integration -->
                 <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-cloud"></i>
+                    <div class="project-card-header">
+                        <div class="project-icon">⚡</div>
+                        <h3>Cloud Integration</h3>
                     </div>
-                    <h3>SAP Cloud Integration</h3>
-                    <p>Integration flows in SAP CPI for various enterprise scenarios</p>
-                    <a href="pages/sap-cloud-integration.html" class="btn btn-outline">View Details</a>
+                    <div class="project-card-body">
+                        <p>Designed and deployed integration flows in SAP CPI for various scenarios including real-time data synchronization and EDI processing.</p>
+                        <div class="project-tech">
+                            <strong>Technologies:</strong> SAP CPI, iFlows, SOAP/REST
+                        </div>
+                        <a href="sap-cloud-integration.html" class="btn">View Details</a>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
+    <!-- Technical Expertise -->
+    <section class="expertise">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Expertise</h2>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-item">
+                    <div class="expertise-icon">💻</div>
+                    <h3>ABAP Development</h3>
+                    <p>Advanced ABAP, OOPs, CDS Views, AMDP</p>
+                </div>
+                <div class="expertise-item">
+                    <div class="expertise-icon">🌐</div>
+                    <h3>Integration</h3>
+                    <p>SOAP/REST, OData, IDoc, RFC, BAPI</p>
+                </div>
+                <div class="expertise-item">
+                    <div class="expertise-icon">💾</div>
+                    <h3>SAP Modules</h3>
+                    <p>SD, FI, HCM, REFX, MM, PP</p>
+                </div>
+                <div class="expertise-item">
+                    <div class="expertise-icon">🏆</div>
+                    <h3>Certifications</h3>
+                    <p>SAP Certified Development Associate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Umer Anwar - SAP ABAP Developer. All rights reserved.</p>
-            <div class="social-links">
-                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">UA</div>
+                    <span>Umer Anwar</span>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:your.email@example.com" title="Email">
+                        ✉️
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+                        🔗
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" title="GitHub">
+                        🐙
+                    </a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Umer Anwar - SAP ABAP Developer. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

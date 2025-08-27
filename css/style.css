@@ -268,3 +268,4 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+@import url('pages.css');

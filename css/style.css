@@ -1075,3 +1075,52 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* Technical Specifications Section */
+.technical-specs {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.specs-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.specs-col h3 {
+    color: var(--sap-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--sap-light-blue);
+    padding-bottom: 0.5rem;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.spec-item:last-child {
+    border-bottom: none;
+}
+
+.spec-item strong {
+    color: var(--sap-blue);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .specs-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
